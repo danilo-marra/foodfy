@@ -154,25 +154,25 @@ h2.tituloReceitas {
     margin: 50px 0 30px 0;
 }
 
-.receita img {
+.receita img, .receitaHome img {
     border-radius: 15px;
     max-width: 450px;
 }
 
-.receita h3 {
+.receita h3, .receitaHome h3 {
     font-size: 18px;
     font-family: 'Roboto-Regular', sans-serif;
     letter-spacing: 0.5px;
     margin: 15px 0 5px 0;
 }
 
-.receita p {
+.receita p, .receitaHome p {
     font-size: 14px;
     font-family: 'Roboto-Regular', sans-serif;
     color: #777777;
 }
 
-.receitas, .receitasPage {
+.receitasHome, .receitasPage {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr;
     gap: 50px 30px;
@@ -234,7 +234,7 @@ footer {
     box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9);
     border-radius: 16px;
     z-index: 100;
-    display: block;
+    display: none;
 }
 
 .modal .description {
@@ -244,7 +244,7 @@ footer {
 .modal img {
     border-radius: 15px;
     margin: 15px;
-    width: 600px;
+    width: 600px; 
 }
 
 .modal .description h3 {
@@ -272,8 +272,6 @@ footer {
     z-index: 1;
 }
 
-
-
 .modal-overlay {
     z-index: 50;
     position: fixed;
@@ -282,10 +280,20 @@ footer {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+#close-button {
+    cursor: pointer;
 }
 
 .closed {
     display: none;
 }
+
 
 
